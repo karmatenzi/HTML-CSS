@@ -1,0 +1,379 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+:root{
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+body{
+    font-family: var(--font-family-sans-serif);
+    line-height: 1.7;
+}
+p{
+    font-size: 18px;
+    font-weight: 300;
+    color: #535ba0;
+}
+h4{
+    font-size: 34px;
+    font-weight: 900;
+}
+h5{
+    font-size: 24px;
+    font-weight: 400;
+
+}
+
+
+.section-c1{
+    padding: 100px 60px;
+}
+.section-c2{
+    margin: 100px 60px;
+}
+/* Home page */
+
+.header{
+    background-color:#535ba0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 12%;
+    overflow: hidden;
+    margin: 0px 0px 200px;
+    border-bottom: 3px solid #eee;
+    
+}
+.header h4{
+    font-size: 34px;
+    font-weight: 900;
+    color: var(--white);
+    padding: 5px 0px 0px 80px;
+}
+#navbar ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 40px;
+
+}
+.header #navbar li{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 20px;
+}
+#navbar li a{
+    transition: all 400ms ease-out;
+    color: var(--white);
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color: var(--gray-dark);
+}
+#navbar li a.active::after{
+    content: '';
+    position: absolute;
+}
+/* Banner */
+.banner{
+    border-bottom: 3px solid #eee;
+    padding-top: 20px
+}
+.banner .main-card{
+    background-image: url('../images/main_banner.jpg');
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    height: 60vh;
+    margin: 200px 100px 100px;
+    padding: 55px 40px;
+    border-bottom: 3px solid #eee;
+
+}
+.main-card .card-caption{
+    width: 28%;
+    height: 100%;
+    text-align: start;
+    background-color:var(--white);
+    padding: 30px;
+    color: var(--white);
+}
+
+.card-caption h4{
+    color: var(--dark);
+    font-size: 34px;
+    margin: 10px;
+}
+.card-caption p{
+    margin: 10px;
+    font-size: 14px;
+}
+.card-caption span{
+    margin: 10px;
+    font-size: 16px;
+}
+.card-caption em{
+    color: #535ba0;
+}
+.card-caption span,p{
+    color: var(--gray);
+}
+.primary-button{
+    border: #535ba0 solid 2px;
+    color: #535ba0;
+    padding: 4px 8px; 
+    width: 110px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    margin: 30px 0;
+    background-color: transparent;
+}
+.primary-button:hover{
+    background-color: #535ba0;
+    transition: all 0.5s ease;
+}
+.primary-button a:hover{
+    color: var(--white);
+}
+/* courses */
+.courses{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin: 0px 70px 100px;
+    padding: 100px 120px 100px 30px;
+    border-bottom: 3px solid #eee;
+}
+.courses .course-box{
+    width: 32%;
+    height: 30vh;
+    text-align: center;
+    background-color:#eaebef;
+    padding: 40px;
+    color: var(--white);
+    margin: 3px;
+}
+.courses .course-box h4{
+    color: var(--dark);
+    font-size: 20px;
+    padding: 10px;
+}
+.courses .course-box p{
+    color: var(--light);
+    font-size: 16px;
+    padding: 10px;
+}
+.courses .course-box:hover{
+    background-color: #535ba0;
+}
+.courses .course-box p a:hover{
+    color: var(--orange);
+}
+/* top-image */
+.top-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 0 100px;
+    padding: 0 30px 400px;
+    border-bottom: 3px solid #eee;
+}
+.top-image .image-text{
+    width: 99%;
+    text-align: left;
+    margin: 3px;
+    height: 50vh;
+    padding: 0px 65px 30px;
+}
+.top-image .image-text img{
+    width: 100%;
+    border-radius: 2px;
+}
+.top-image .image-text h4{
+    color: var(--dark);
+    font-size: 18px;
+}
+.top-image .image-text p{
+    color: var(--gray);
+    font-size: 16px;
+}
+/* divide-section */
+.divide-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: flex-start;
+    padding: 0 30px 100px;
+    margin: 100px 45px 80px;
+    border-bottom: 3px solid #eee;
+}
+.divide-section .images-text{
+    padding-left: 40px;
+}
+.divide-section .image{
+    width: 80%;
+    height: 70%;
+    padding: 10px;
+    margin: 10px;
+}
+.divide-section .images-text h4{
+    color: var(--dark);
+    font-size: 18px;
+    text-align: left;
+
+}
+.divide-section .images-text p{
+    color: var(--gray);
+    font-size: 16px;
+    text-align: justify;
+}
+
+/* Media Query */
+/* @media only screen and (max-width:799px){
+    .header{
+        width: 100%;
+        height: 10%;
+        
+    }
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        left: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: var(--blue);
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1); 
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+
+    }
+    .navbar.active{
+        left: 10px;
+    }
+    .navbar li{
+        margin-bottom: 25px;
+    }
+    .mobile{
+        display: flex;
+        align-items: center;
+
+    }
+    .mobile i{
+        color: var(--white);
+        font-size: 24px;
+        padding-left: 20px;
+    }
+    .close{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: var(--gray);
+        font-size: 24px;
+    }
+
+    .banner {
+        width: 90%;
+        overflow: hidden;
+        padding: 10px;
+    }
+    .main-card .card-caption{
+        width: 60%;
+        height: 10%;
+    }
+    .courses{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .courses .course-box{
+        width: 100%;
+        height: 20%;
+    }
+    .top-image{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .top-image .image-text img{
+        width: 100%;
+    }
+    .top-image .image-text{
+        width: 100%;
+    }
+    .divide-section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .divide-section .image-text{
+        width: 100%;
+        text-align: justify;
+    }
+    .card-caption h4{
+        font-size: 20px;
+        margin: 8px 0;
+    }
+    .card-caption p{
+        margin: 8px 0;
+        font-size: 14px;
+    }
+    h4{
+        font-size: 20px;
+    
+    }
+    p{
+        font-size: 14px;
+    }
+    
+} */

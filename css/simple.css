@@ -1,0 +1,113 @@
+@import "style.css";
+
+/* simple page */
+
+.grid-container{
+    display: grid;
+    padding: 80px;
+    margin: 20px 40px;
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .4r 1fr 1fr .7fr 1fr;
+    grid-template-areas: "nav nav nav"
+                         "sec sec sec"
+                         "con con con"
+                         "hom1 hom2 hom3"
+                         "fot fot fot"
+                          ;
+}
+.item1{
+    /* background-color: #007bff; */
+    grid-area: nav;
+    text-align: left;
+    padding: 0 0 30px;
+   
+}
+.item1 h4{
+    font-size: 20px;
+    font-weight: 700;
+}
+.item2{
+    /* background-color: #ff7b00; */
+    grid-area: sec;
+}
+.item2 img{
+    width: 100%;
+
+}
+.item3{
+    /* background-color: #00ff2a; */
+    grid-area: con;
+    padding-left: -100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+.item3 .left-column{
+    margin: 20px 50px 20px 0;
+}
+.item3 .right-column{
+    margin: 20px 0px 20px 20px;
+}
+.item3 h4{
+    font-size: 20px;
+    font-weight: 700;
+}
+.item4{
+    /* background-color: #285b91; */
+    grid-area: hom1;
+}
+.item4 h4{
+    font-size: 20px;
+    font-weight: 700;
+}
+.item5{
+    /* background-color: #007bff; */
+    grid-area: hom2;
+}
+.item5 h4{
+    font-size: 20px;
+    font-weight: 700;
+}
+.item6{
+    /* background-color: #007bff; */
+    grid-area: hom3;
+}
+.item6 h4{
+    font-size: 20px;
+    font-weight: 700;
+}
+.item7{
+    /* background-color: #007bff; */
+    grid-area: fot;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 30px 0;
+    margin: 10px;
+}
+.item7 .sub-left{
+    width: 50%;
+}
+.item7 .sub-right{
+    width: 50%;
+    
+}
+.item7 .form{
+    height: 55px;
+    margin: 30px 60px 30px 0px;
+    text-align: justify;
+    border: 2px solid var(--gray);
+    color: var(--white);
+    border-radius: 5px;
+}
+.item7 .form-area{
+    height: 200px;
+    margin: 30px 60px 30px 0px;
+    text-align: justify;
+    border: 2px solid var(--gray);
+    color: var(--white);
+    border-radius: 5px;
+}

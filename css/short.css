@@ -1,0 +1,10 @@
+@import "style.css";
+/* heading-page */
+#heading-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin: 110px 20px 80px;
+
+}
