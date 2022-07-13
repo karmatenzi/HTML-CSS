@@ -15,8 +15,11 @@
     --purple: #6F42C1;
     --red: #DC3545;
     --orange: #FD7E14;
-    --cyan: #17A2B8;
-    --white: #FFF;
+    --white: #FFFFFF;
+    --light: #F8F9FA;
+    --ash:#EEEEEE;
+    --dark-ash:#EAEBEF;
+    --light-gray:#AAAAAA;
     --gray: #6C757D;
     --gray-dark: #343A40;
     --primary: #007BFF;
@@ -24,66 +27,39 @@
     --success: #28A745;
     --info: #17A2B8;
     --warning: #FFC107;
-    --danger: #DC3545;
-    --light: #F8F9FA;
     --dark: #343A40;
-    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --font-family-sans-serif:  'Roboto Slab';
 }
-
-html, body {
-    /* font-family: var(--font-family-sans-serif); */
-    font-family: 'Roboto Slab';
+body {
+    font-family: var(--font-family-sans-serif);
     line-height: 1.5;
 }
 
 p {
     font-size: 18px;
     font-weight: 300;
-    color: var(--dark-blue)
+    color: var(--gray)
 }
 
 h4 {
     font-size: 34px;
     font-weight: 900;
 }
-
-h5 {
-    font-size: 24px;
-    font-weight: 400;
-
-}
-
-
-.section-c1 {
-    padding: 100px 60px;
-}
-
-.section-c2 {
-    margin: 100px 60px;
-}
-
 /* Home page */
 .wrapper{
   width:100%;
   height: 100vh;
-  /* border:2px solid red;
-  overflow: auto;
-  margin: 0; */
 }
 
 .header {
     background-color: var(--dark-blue);
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0;
     width: 100%;
-    height: 12%;
-    margin: 0px 0px 200px;
-
+    height: 11%;
 }
 
 .header h4 {
@@ -96,7 +72,6 @@ h5 {
     justify-content: flex-end;
     align-items: center;
     padding: 0 40px;
-
 }
 
 .header .navbar li {
@@ -111,7 +86,7 @@ h5 {
 }
 
 .navbar li a:hover,
-.navbar li a.active {
+.navbar li a.active{
     color: var(--gray-dark);
 }
 
@@ -119,33 +94,32 @@ h5 {
     content: '';
     position: absolute;
 }
+.container{
+    width: 100%;
+    padding: 100px;
+}
 
 /* Banner */
 .banner {
-    border-bottom: 3px solid #eee;
-    padding-top: 20px
+    border-bottom: 3px solid var(--ash);
+    padding-bottom: 100px
 }
 
 .banner .main-card {
     background: url('../images/main_banner.jpg') top;
     background-size: cover;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 60vh;
-    margin: 190px 100px 100px;
+    height: 55vh;
     padding: 55px 55px;
-    border-bottom: 3px solid #eee;
-
+    margin-top: 100px;
+    border-bottom: 3px solid var(--ash);
 }
 
 .main-card .card-caption {
     width: 28%;
     height: 100%;
-    text-align: start;
     background-color: var(--white);
     padding: 30px;
-    color: var(--white);
 }
 
 .card-caption h4 {
@@ -155,22 +129,20 @@ h5 {
 }
 
 .card-caption p {
-    margin: 10px;
     font-size: 14px;
+    color: var(--gray);
+    margin: 10px;
 }
 
 .card-caption span { 
-    margin: 10px;
     font-size: 16px;
+    color: var(--light-gray);
+    margin: 10px;
 }
 
 .card-caption em {
+    font-style: normal;
     color: var(--dark-blue);
-}
-
-.card-caption span,
-p {
-    color: var(--gray);
 }
 
 .primary-button {
@@ -193,32 +165,23 @@ p {
 .primary-button:hover a{
     color: var(--white);
 }
-
-/* .primary-button a:hover {
-    color: var(--white);
-} */
-
-/* courses */
 .courses {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    margin: 0px 70px 100px;
-    padding: 100px 120px 100px 30px;
-    border-bottom: 3px solid #eee;
+    padding: 100px 0px;
+    border-bottom: 3px solid var(--ash);
 }
 
 .courses .course-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 32%;
-    height: 30vh;
-    text-align: center;
-    background-color: #eaebef;
-    padding: 40px;
+    padding: 55px;
     color: var(--dark-blue);
     margin: 3px;
+    background-color: var(--dark-ash);
 }
 
 .courses .course-box h4 {
@@ -231,11 +194,13 @@ p {
     color: var(--gray);
     font-size: 14px;
     padding: 10px;
+    text-align: center;
 }
 
 .courses .course-box:hover {
     background-color: var(--dark-blue);
     color: var(--white);
+    transition: all 0.5s;
 }
 
 .courses .course-box:hover h4 {
@@ -257,55 +222,26 @@ p {
 .top-image {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0px 0 100px;
-    padding: 0 30px 400px;
-    border-bottom: 3px solid #eee;
+    padding:100px 0px;
+    border-bottom: 3px solid var(--ash);
 }
-
-.top-image .image-text {
-    width: 99%;
-    text-align: left;
-    margin: 3px;
-    height: 50vh;
-    padding: 0px 65px 30px;
-}
-
-.top-image .image-text img {
-    width: 100%;
-    border-radius: 2px;
-}
-
-.top-image .image-text h4 {
-    color: var(--dark);
-    font-size: 18px;
-}
-
-.top-image .image-text p {
-    color: var(--gray);
-    font-size: 16px;
-}
-
 /* divide-section */
 .divide-section {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0 30px 100px;
-    margin: 100px 45px 80px;
-    border-bottom: 3px solid #eee;
+    padding:100px 0px;
+    border-bottom: 3px solid var(--ash);
 }
 
 .divide-section .images-text {
-    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    padding: 20px;
 }
 
-.divide-section .image {
-    width: 80%;
-    height: 70%;
+.divide-section img {
+    width: 50%;
     padding: 10px;
     margin: 10px;
 }
@@ -313,21 +249,18 @@ p {
 .divide-section .images-text h4 {
     color: var(--dark);
     font-size: 18px;
-    text-align: left;
-
 }
 
 .divide-section .images-text p {
-    color: var(--gray);
     font-size: 16px;
     text-align: justify;
+    padding: 10px 0px;
 }
 
-/* Media Query */
+/* Media Query--600px */
 @media only screen and (max-width: 600px) {
     h4 {
         font-size: 20px;
-
     }
 
     p {
@@ -343,7 +276,6 @@ p {
 
     .navbar ul {
         padding: 15px;
-
     }
 
     .header .navbar li {
@@ -351,7 +283,7 @@ p {
     }
     /* banner */
     .banner {
-        border-bottom: 2px solid #eee;
+        border-bottom: 2px solid var(--ash);
         padding: 10px 5px 0px;
     }
 
@@ -359,8 +291,7 @@ p {
         height: 100%;
         margin: 100px 15px 50px;
         padding: 60px 20px 60px 70px;
-        border-bottom: 2px solid #eee;
-
+        border-bottom: 2px solid var(--ash);
     }
 
     .main-card .card-caption {
@@ -399,50 +330,158 @@ p {
 
     .courses .course-box {
         width: 100%;
-        height: 20%;
-        
+        height: 20%; 
     }
     /* top-image */
     .top-image {
         width: 100%;
         padding: 40px 20px 0px;
+        margin: 0px;
     }
     .top-image .image-text {
         width: 100%;
+        height: 43vh;
         margin: 0px;
-        padding: 0;
-        
+        padding: 0; 
     }
 
     .top-image .image-text img {
         width: 100%;
         margin: 0;
     }
-    .top-image .primary-button {
-        margin:10px 0;
+    .top-image .images-text, .primary-button {
+        margin:30px 0 0;
     }
-
+    /* div-section */
     .divide-section {
         display: flex;
         flex-direction: column;
+        padding: 5px 10px 40px 10px;
+        margin: 5px 10px 20px;
+        border-bottom: 3px solid var(--ash);
+    }
+    
+    .divide-section img {
         width: 100%;
-        justify-content: center;
-        align-items: center;
+        height: 70%;
+        padding: 30px 0px 15px; 
+        margin: 0px;
+    }
+    .divide-section .images-text {
+        padding: 0px;
+        margin: 0px;
+   }
+}
+
+/* Media query--960px */
+ @media only screen and (max-width: 960px) {
+    h4 {
+        font-size: 24px;
     }
 
-    .divide-section .images-text {
-        width: 100%;
-        text-align: justify;
+    p {
+        font-size: 16px;
+    }
+    .header {
+        height: 10%;
+    }
+
+    .header h4 {
+        padding: 25px;
+    }
+
+    .navbar ul {
+        padding: 15px;
+    }
+
+    .header .navbar li {
+        font-size: 14px;
+    }
+    /* banner */
+    .banner {
+        border-bottom: 2px solid var(--ash);
+        padding: 60px 40px 0px;
+    }
+
+    .banner .main-card {
+        height: 100%;
+        margin: 100px 15px 50px;
+        padding: 60px 20px 60px 70px;
+        border-bottom: 2px solid var(--ash);
+    }
+
+    .main-card .card-caption {
+        width: 50%;
     }
 
     .card-caption h4 {
+        color: var(--dark);
         font-size: 20px;
-        margin: 8px 0;
     }
 
     .card-caption p {
-        margin: 8px 0;
+        font-size: 12px;
+    }
+
+    .card-caption span {
         font-size: 14px;
     }
 
+    .primary-button {
+        padding: 4px 8px;
+        width: 100px;
+        font-size: 12px;
+        margin: 30px 130px;
+    }
+    /* courses */
+    .courses {
+        display: flex;
+        flex-direction: row;
+        margin: 0 30px 30px;
+        padding:40px 60px 40px 20px;
+    }
+
+    .courses .course-box {
+        width: 48%;
+        height: 30%;
+        padding: 20px;  
+    }
+    /* top-image */
+    .top-image {
+        padding: 20px 50px 50px;
+        margin: 0px;
+    }
+    .top-image .image-text {
+        width: 100%;
+        height: 43vh;
+        margin: 0px;
+        padding: 0;  
+    }
+
+    .top-image .image-text img {
+        width: 100%;
+        margin: 0;
+    }
+    .top-image .images-text, .primary-button {
+        margin:30px 0 0;
+    }
+    /* div-section */
+    .divide-section {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 40px 40px;
+        margin: 10px 10px 20px;
+        border-bottom: 3px solid var(--ash);
+    }
+    
+    .divide-section img {
+        width: 100%;
+        height: 70%;
+        padding: 30px 0px 15px; 
+        margin: 0px;
+    }
+    .divide-section .images-text {
+        padding: 0px;
+        margin: 0px;
+   }
 }
