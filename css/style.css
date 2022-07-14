@@ -37,13 +37,37 @@ body {
 
 p {
     font-size: 18px;
-    font-weight: 300;
     color: var(--gray)
 }
 
 h4 {
     font-size: 34px;
     font-weight: 900;
+    color: var(--dark);
+}
+h5{
+    color: var(--dark);
+    font-size: 20px;
+}
+.primary-button {
+    border: 2px solid var(--dark-blue);
+    color: var(--dark-blue);
+    padding: 4px 8px;
+    width: 110px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    margin: 18px 0px;
+    background-color: transparent;
+}
+
+.primary-button:hover{
+    background-color: var(--dark-blue);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.primary-button:hover a{
+    color: var(--white);
 }
 /* Home page */
 .wrapper{
@@ -123,14 +147,11 @@ h4 {
 }
 
 .card-caption h4 {
-    color: var(--dark);
-    font-size: 34px;
     margin: 10px;
 }
 
 .card-caption p {
     font-size: 14px;
-    color: var(--gray);
     margin: 10px;
 }
 
@@ -144,27 +165,7 @@ h4 {
     font-style: normal;
     color: var(--dark-blue);
 }
-
-.primary-button {
-    border: var(--dark-blue) solid 2px;
-    color: var(--dark-blue);
-    padding: 4px 8px;
-    width: 110px;
-    font-size: 14px;
-    text-align: center;
-    font-weight: bold;
-    margin: 30px 0;
-    background-color: transparent;
-}
-
-.primary-button:hover{
-    background-color: var(--dark-blue);
-    transition: all 0.5s ease;
-    cursor: pointer;
-}
-.primary-button:hover a{
-    color: var(--white);
-}
+/* courses */
 .courses {
     display: flex;
     flex-wrap: wrap;
@@ -184,14 +185,11 @@ h4 {
     background-color: var(--dark-ash);
 }
 
-.courses .course-box h4 {
-    color: var(--dark);
-    font-size: 20px;
+.courses .course-box h5 {
     padding: 10px;
 }
 
 .courses .course-box p {
-    color: var(--gray);
     font-size: 14px;
     padding: 10px;
     text-align: center;
@@ -203,7 +201,7 @@ h4 {
     transition: all 0.5s;
 }
 
-.courses .course-box:hover h4 {
+.courses .course-box:hover h5 {
     color: var(--white);
 }
 
@@ -225,6 +223,9 @@ h4 {
     padding:100px 0px;
     border-bottom: 3px solid var(--ash);
 }
+.top-image h5{
+    padding-top: 10px;
+}
 /* divide-section */
 .divide-section {
     display: flex;
@@ -236,50 +237,124 @@ h4 {
 .divide-section .images-text {
     display: flex;
     flex-direction: column;
-    width: 48%;
-    padding: 20px;
-}
-
-.divide-section img {
     width: 50%;
     padding: 10px;
-    margin: 10px;
 }
 
-.divide-section .images-text h4 {
-    color: var(--dark);
-    font-size: 18px;
-}
-
-.divide-section .images-text p {
+.top-image .images-text, p {
     font-size: 16px;
     text-align: justify;
     padding: 10px 0px;
 }
 
-/* Media Query--600px */
-@media only screen and (max-width: 600px) {
+/* Media Query--480px */
+@media only screen and (max-width: 480px) {
     h4 {
         font-size: 20px;
     }
-
-    p {
+    h5{
         font-size: 14px;
     }
-    .header {
+    p {
+        font-size: 12px;
+    }
+    .header{
         height: 8%;
     }
-
     .header h4 {
         padding: 25px;
     }
-
     .navbar ul {
         padding: 15px;
     }
 
     .header .navbar li {
         font-size: 12px;
+    }
+    .container {
+        padding:0px;
+    }
+    /* banner */
+    .banner {
+        border-bottom: 2px solid var(--ash);
+        padding: 10px 5px 0px;
+    }
+
+    .banner .main-card {
+        height: 70%;
+        margin: 100px 15px 20px;
+        padding: 60px 20px 60px 70px;
+        border-bottom: 2px solid var(--ash);
+    }
+
+    .main-card .card-caption {
+        width: 88%;
+        text-align: center;
+    }
+
+    .card-caption span {
+        font-size: 14px;
+    }
+
+    .primary-button {
+        width: 100px;
+        font-size: 12px;
+    }
+    /* courses */
+    .courses {
+        padding:20px 20px 20px 15px;
+    }
+
+    .courses .course-box {
+        width: 100%;
+    }
+    /* top-image */
+    .top-image {
+        padding:20px;
+    }
+    .top-image .images-text, .primary-button {
+        margin:14px 0 0;
+    }
+    /* div-section */
+    .divide-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        border-bottom: 3px solid var(--ash);
+    }
+    .divide-section img{
+        width: 100%;
+        padding: 20px;
+    }
+    .divide-section .images-text{
+        width: 100%;
+        padding: 20px;
+    }
+
+}
+/* Media Query--837px */
+@media only screen and (max-width: 837px) {
+    h4 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .header{
+        height: 10%;
+    }
+    .navbar ul {
+        padding: 18px;
+    }
+
+    .header .navbar li {
+        font-size: 14px;
+    }
+    .container {
+        padding:0px;
     }
     /* banner */
     .banner {
@@ -289,199 +364,56 @@ h4 {
 
     .banner .main-card {
         height: 100%;
-        margin: 100px 15px 50px;
-        padding: 60px 20px 60px 70px;
+        margin: 120px 15px 20px;
+        padding: 60px;
         border-bottom: 2px solid var(--ash);
     }
 
     .main-card .card-caption {
-        width: 90%;
+        width: 60%;
         text-align: center;
     }
 
-    .card-caption h4 {
-        color: var(--dark);
-        font-size: 20px;
-    }
-
-    .card-caption p {
-        font-size: 12px;
-    }
-
     .card-caption span {
         font-size: 14px;
     }
 
     .primary-button {
-        padding: 4px 8px;
         width: 100px;
         font-size: 12px;
-        margin: 30px 130px;
     }
     /* courses */
     .courses {
+        padding:20px 20px 20px 15px;
+    }
+
+    .courses .course-box {
+        width: 100%;
+    }
+    /* top-image */
+    .top-image {
+        padding:20px;
+    }
+    .top-image .images-text, .primary-button {
+        margin:14px 0 0;
+    }
+    /* div-section */
+    .divide-section {
         display: flex;
         flex-direction: column;
+        width: 100%;
+        justify-content: center;
         align-items: center;
-        width: 100%;
-        margin: 0;
-        padding:40px 20px 40px 15px;
-    }
-
-    .courses .course-box {
-        width: 100%;
-        height: 20%; 
-    }
-    /* top-image */
-    .top-image {
-        width: 100%;
-        padding: 40px 20px 0px;
-        margin: 0px;
-    }
-    .top-image .image-text {
-        width: 100%;
-        height: 43vh;
-        margin: 0px;
-        padding: 0; 
-    }
-
-    .top-image .image-text img {
-        width: 100%;
-        margin: 0;
-    }
-    .top-image .images-text, .primary-button {
-        margin:30px 0 0;
-    }
-    /* div-section */
-    .divide-section {
-        display: flex;
-        flex-direction: column;
-        padding: 5px 10px 40px 10px;
-        margin: 5px 10px 20px;
+        padding: 0px;
         border-bottom: 3px solid var(--ash);
     }
-    
-    .divide-section img {
+    .divide-section img{
         width: 100%;
-        height: 70%;
-        padding: 30px 0px 15px; 
-        margin: 0px;
+        padding: 20px;
     }
-    .divide-section .images-text {
-        padding: 0px;
-        margin: 0px;
-   }
-}
-
-/* Media query--960px */
- @media only screen and (max-width: 960px) {
-    h4 {
-        font-size: 24px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-    .header {
-        height: 10%;
-    }
-
-    .header h4 {
-        padding: 25px;
-    }
-
-    .navbar ul {
-        padding: 15px;
-    }
-
-    .header .navbar li {
-        font-size: 14px;
-    }
-    /* banner */
-    .banner {
-        border-bottom: 2px solid var(--ash);
-        padding: 60px 40px 0px;
-    }
-
-    .banner .main-card {
-        height: 100%;
-        margin: 100px 15px 50px;
-        padding: 60px 20px 60px 70px;
-        border-bottom: 2px solid var(--ash);
-    }
-
-    .main-card .card-caption {
-        width: 50%;
-    }
-
-    .card-caption h4 {
-        color: var(--dark);
-        font-size: 20px;
-    }
-
-    .card-caption p {
-        font-size: 12px;
-    }
-
-    .card-caption span {
-        font-size: 14px;
-    }
-
-    .primary-button {
-        padding: 4px 8px;
-        width: 100px;
-        font-size: 12px;
-        margin: 30px 130px;
-    }
-    /* courses */
-    .courses {
-        display: flex;
-        flex-direction: row;
-        margin: 0 30px 30px;
-        padding:40px 60px 40px 20px;
-    }
-
-    .courses .course-box {
-        width: 48%;
-        height: 30%;
-        padding: 20px;  
-    }
-    /* top-image */
-    .top-image {
-        padding: 20px 50px 50px;
-        margin: 0px;
-    }
-    .top-image .image-text {
+    .divide-section .images-text{
         width: 100%;
-        height: 43vh;
-        margin: 0px;
-        padding: 0;  
+        padding: 20px;
     }
 
-    .top-image .image-text img {
-        width: 100%;
-        margin: 0;
-    }
-    .top-image .images-text, .primary-button {
-        margin:30px 0 0;
-    }
-    /* div-section */
-    .divide-section {
-        display: flex;
-        flex-direction: column;
-        padding: 10px 40px 40px;
-        margin: 10px 10px 20px;
-        border-bottom: 3px solid var(--ash);
-    }
-    
-    .divide-section img {
-        width: 100%;
-        height: 70%;
-        padding: 30px 0px 15px; 
-        margin: 0px;
-    }
-    .divide-section .images-text {
-        padding: 0px;
-        margin: 0px;
-   }
 }
