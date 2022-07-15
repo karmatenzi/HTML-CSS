@@ -28,10 +28,10 @@
     --info: #17A2B8;
     --warning: #FFC107;
     --dark: #343A40;
-    --font-family-sans-serif:  'Roboto Slab';
+    --font-family:  'Roboto Slab';
 }
 body {
-    font-family: var(--font-family-sans-serif);
+    font-family: var(--font-family);
     line-height: 1.5;
 }
 
@@ -99,7 +99,6 @@ h5{
 }
 
 .navbar li {
-    font-size: 16px;
     font-weight: 600;
     padding: 0 20px;
 }
@@ -161,7 +160,7 @@ h5{
     margin: 10px;
 }
 
-.card-caption bold {
+.card-caption b {
     color: var(--dark-blue);
 }
 /* courses */
@@ -318,7 +317,6 @@ h5{
     }
     /* div-section */
     .divide-section {
-        display: flex;
         flex-direction: column;
         width: 100%;
         justify-content: center;
@@ -336,7 +334,7 @@ h5{
     }
 }
 /* Media Query--480px */
-@media (min-width:376px)and (max-width: 480px) {
+@media (min-width:376px) and (max-width: 480px) {
     h4 {
         font-size: 20px;
     }
@@ -405,7 +403,6 @@ h5{
     }
     /* div-section */
     .divide-section {
-        display: flex;
         flex-direction: column;
         width: 100%;
         justify-content: center;
@@ -472,9 +469,6 @@ h5{
     }
     /* courses */
     .courses {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
         padding: 20px 20px 20px 15px;
     }
 
@@ -490,7 +484,6 @@ h5{
     }
     /* div-section */
     .divide-section {
-        display: flex;
         flex-direction: column;
         width: 100%;
         justify-content: center;

@@ -4,7 +4,7 @@
 
 .grid-container{
     display: grid;
-    padding: 80px;
+    padding: 180px 80px 80px;
     margin: 20px 40px;
     gap: 3rem;
     grid-template-columns: 1fr 1fr 1fr;
@@ -17,7 +17,6 @@
                           ;
 }
 .item1{
-    /* background-color: #007bff; */
     grid-area: nav;
     text-align: left;
     padding: 0 0 30px;
@@ -28,21 +27,22 @@
     font-weight: 700;
 }
 .item2{
-    /* background-color: #ff7b00; */
     grid-area: sec;
+    padding-bottom: 100px;
+    border-bottom: 3px solid var(--ash);
 }
 .item2 img{
     width: 100%;
 
 }
 .item3{
-    /* background-color: #00ff2a; */
     grid-area: con;
     padding-left: -100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px 0;
+    padding-bottom: 100px;
+    border-bottom: 3px solid var(--ash);
 }
 .item3 .left-column{
     margin: 20px 50px 20px 0;
@@ -55,37 +55,40 @@
     font-weight: 700;
 }
 .item4{
-    /* background-color: #285b91; */
     grid-area: hom1;
+    padding-bottom: 100px;
+    border-bottom: 3px solid var(--ash);
 }
 .item4 h4{
     font-size: 20px;
     font-weight: 700;
 }
 .item5{
-    /* background-color: #007bff; */
     grid-area: hom2;
+    padding-bottom: 100px;
+    border-bottom: 3px solid var(--ash);
 }
 .item5 h4{
     font-size: 20px;
     font-weight: 700;
 }
 .item6{
-    /* background-color: #007bff; */
     grid-area: hom3;
+    padding-bottom: 100px;
+    border-bottom: 3px solid var(--ash);
 }
 .item6 h4{
     font-size: 20px;
     font-weight: 700;
 }
 .item7{
-    /* background-color: #007bff; */
     grid-area: fot;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    padding: 30px 0;
+    padding-bottom: 100px;
+    border-bottom: 3px solid var(--ash);
     margin: 10px;
 }
 .item7 .sub-left{
