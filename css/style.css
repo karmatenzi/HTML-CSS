@@ -130,7 +130,7 @@ h5{
 }
 
 .main-card {
-    background: url('../images/main_banner.jpg') top;
+    background: url('../asset/images/main_banner.jpg') top;
     background-size: cover;
     display: flex;
     height: 55vh;
