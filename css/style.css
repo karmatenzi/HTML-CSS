@@ -17,9 +17,9 @@
     --orange: #FD7E14;
     --white: #FFFFFF;
     --light: #F8F9FA;
-    --ash:#EEEEEE;
-    --dark-ash:#EAEBEF;
-    --light-gray:#AAAAAA;
+    --ash: #EEEEEE;
+    --dark-ash: #EAEBEF;
+    --light-gray: #AAAAAA;
     --gray: #6C757D;
     --gray-dark: #343A40;
     --primary: #007BFF;
@@ -28,8 +28,9 @@
     --info: #17A2B8;
     --warning: #FFC107;
     --dark: #343A40;
-    --font-family:  'Roboto Slab';
+    --font-family: 'Roboto Slab';
 }
+
 body {
     font-family: var(--font-family);
     line-height: 1.5;
@@ -45,34 +46,39 @@ h4 {
     font-weight: 900;
     color: var(--dark);
 }
-h5{
+
+h5 {
     color: var(--dark);
     font-size: 20px;
+    padding-bottom: 18px;
 }
+
 .primary-button {
     border: 2px solid var(--dark-blue);
     color: var(--dark-blue);
     padding: 4px 8px;
-    width: 110px;
+    width: 6vw;
     font-size: 14px;
     text-align: center;
     font-weight: bold;
-    margin: 18px 0px;
+    margin: 8px 0px;
     background-color: transparent;
 }
 
-.primary-button:hover{
+.primary-button:hover {
     background-color: var(--dark-blue);
     transition: all 0.5s ease;
     cursor: pointer;
 }
-.primary-button:hover a{
+
+.primary-button:hover a {
     color: var(--white);
 }
+
 /* Home page */
-.wrapper{
-  width:100%;
-  height: 100vh;
+.wrapper {
+    width: 100%;
+    height: 100vh;
 }
 
 .header {
@@ -83,7 +89,7 @@ h5{
     position: fixed;
     top: 0;
     width: 100%;
-    height: 100px;
+    height: 11vh;
 }
 
 .header h4 {
@@ -109,7 +115,7 @@ h5{
 }
 
 .navbar li a:hover,
-.navbar li a.active{
+.navbar li a.active {
     color: var(--gray-dark);
 }
 
@@ -117,7 +123,8 @@ h5{
     content: '';
     position: absolute;
 }
-.container{
+
+.container {
     width: 100%;
     padding: 100px;
 }
@@ -140,7 +147,7 @@ h5{
 
 .card-caption {
     width: 28%;
-    height: 100%;
+    height: 43vh;
     background-color: var(--white);
     padding: 30px;
 }
@@ -154,7 +161,7 @@ h5{
     margin: 10px;
 }
 
-.card-caption span { 
+.card-caption span {
     font-size: 16px;
     color: var(--light-gray);
     margin: 10px;
@@ -163,6 +170,7 @@ h5{
 .card-caption b {
     color: var(--dark-blue);
 }
+
 /* courses */
 .courses {
     display: flex;
@@ -200,17 +208,19 @@ h5{
     transition: all 0.5s;
 }
 
-.course-box:hover h5{
+.course-box:hover h5 {
     color: var(--white);
 }
 
-.course-box:hover p{
+.course-box:hover p {
     color: var(--white);
 }
-.course-box p a{
+
+.course-box p a {
     text-decoration: none;
     color: var(--blue);
 }
+
 .course-box p a:hover {
     color: var(--orange);
 }
@@ -219,12 +229,14 @@ h5{
 .top-image {
     display: flex;
     flex-direction: column;
-    padding:100px 0px;
+    padding: 100px 0px;
     border-bottom: 3px solid var(--ash);
 }
-.top-image h5{
+
+.top-image h5 {
     padding-top: 10px;
 }
+
 /* divide-section */
 .divide-section {
     display: flex;
@@ -240,9 +252,11 @@ h5{
     padding: 10px;
 }
 
-.images-text, p {
+.images-text,
+p {
     font-size: 16px;
     text-align: justify;
+    padding-bottom: 18px;
 }
 
 /* Media Query--375px */
@@ -250,15 +264,20 @@ h5{
     h4 {
         font-size: 16px;
     }
-    h5, p{
+
+    h5,
+    p {
         font-size: 8px;
     }
-    .header{
-        height: 55px;
+
+    .header {
+        height: 5vh;
     }
+
     .header h4 {
         padding: 14px;
     }
+
     .navbar ul {
         padding: 8px;
     }
@@ -266,25 +285,28 @@ h5{
     .navbar li {
         font-size: 8px;
     }
+
     .container {
         padding: 0px;
     }
+
     /* banner */
-    .banner{
-        padding:0;
+    .banner {
+        padding: 0;
     }
 
     .main-card {
         margin: 64px 14px 14px;
         padding: 40px;
-        height: 430px;
+        height: 40vh;
     }
 
     .card-caption {
         width: 100%;
         text-align: center;
-        height: 350px;
+        height: 32vh;
     }
+
     .card-caption p {
         font-size: 12px;
     }
@@ -292,6 +314,7 @@ h5{
     .card-caption span {
         font-size: 12px;
     }
+
     .primary-button {
         padding: 2px 4px;
         width: 80px;
@@ -300,21 +323,26 @@ h5{
         font-weight: bold;
         margin: 18px 0px;
     }
-     /* courses */
-     .courses {
-        padding:14px;
+
+    /* courses */
+    .courses {
+        padding: 14px;
     }
 
     .course-box {
         width: 100%;
     }
+
     /* top-image */
     .top-image {
         padding: 14px;
     }
-    .top-image .images-text, .primary-button {
+
+    .top-image .images-text,
+    .primary-button {
         margin: 14px 0 0;
     }
+
     /* div-section */
     .divide-section {
         flex-direction: column;
@@ -324,32 +352,40 @@ h5{
         padding: 0px;
         border-bottom: 3px solid var(--ash);
     }
-    .divide-section img{
+
+    .divide-section img {
         width: 100%;
         padding: 14px;
     }
-    .images-text{
+
+    .images-text {
         width: 100%;
         padding: 14px;
     }
 }
+
 /* Media Query--480px */
 @media (min-width:376px) and (max-width: 480px) {
     h4 {
         font-size: 20px;
     }
-    h5{
+
+    h5 {
         font-size: 14px;
     }
+
     p {
         font-size: 12px;
     }
-    .header{
-        height: 85px;
+
+    .header {
+        height: 8vh;
     }
+
     .header h4 {
         padding: 20px;
     }
+
     .navbar ul {
         padding: 15px;
     }
@@ -357,9 +393,11 @@ h5{
     .navbar li {
         font-size: 12px;
     }
+
     .container {
         padding: 0px;
     }
+
     /* banner */
     .banner {
         border-bottom: 2px solid var(--ash);
@@ -367,7 +405,6 @@ h5{
     }
 
     .main-card {
-        height: 70%;
         margin: 100px 15px 20px;
         padding: 60px 20px 60px 70px;
         border-bottom: 2px solid var(--ash);
@@ -386,6 +423,7 @@ h5{
         width: 100px;
         font-size: 12px;
     }
+
     /* courses */
     .courses {
         padding: 20px 20px 20px 15px;
@@ -394,13 +432,17 @@ h5{
     .course-box {
         width: 100%;
     }
+
     /* top-image */
     .top-image {
         padding: 20px;
     }
-    .top-image .images-text, .primary-button {
+
+    .top-image .images-text,
+    .primary-button {
         margin: 14px 0 0;
     }
+
     /* div-section */
     .divide-section {
         flex-direction: column;
@@ -410,27 +452,33 @@ h5{
         padding: 0px;
         border-bottom: 3px solid var(--ash);
     }
-    .divide-section img{
+
+    .divide-section img {
         width: 100%;
         padding: 20px;
     }
-    .images-text{
+
+    .images-text {
         width: 100%;
         padding: 20px;
     }
 
 }
+
 /* Media Query--837px */
 @media (min-width:481px) and (max-width: 837px) {
     h4 {
         font-size: 24px;
     }
+
     p {
         font-size: 14px;
     }
-    .header{
-        height: 95px;
+
+    .header {
+        height: 9vh;
     }
+
     .navbar ul {
         padding: 18px;
     }
@@ -438,9 +486,11 @@ h5{
     .navbar li {
         font-size: 14px;
     }
+
     .container {
         padding: 0px;
     }
+
     /* banner */
     .banner {
         border-bottom: 2px solid var(--ash);
@@ -448,7 +498,7 @@ h5{
     }
 
     .main-card {
-        height: 100%;
+        height: 54vh;
         margin: 110px 15px 20px;
         padding: 60px;
         border-bottom: 2px solid var(--ash);
@@ -464,9 +514,10 @@ h5{
     }
 
     .primary-button {
-        width: 100px;
+        width: 12vw;
         font-size: 12px;
     }
+
     /* courses */
     .courses {
         padding: 20px 20px 20px 15px;
@@ -475,13 +526,17 @@ h5{
     .course-box {
         width: 49%;
     }
+
     /* top-image */
     .top-image {
         padding: 20px;
     }
-    .top-image .images-text, .primary-button {
+
+    .top-image .images-text,
+    .primary-button {
         margin: 14px 0 0;
     }
+
     /* div-section */
     .divide-section {
         flex-direction: column;
@@ -491,11 +546,13 @@ h5{
         padding: 0px;
         border-bottom: 3px solid var(--ash);
     }
-    .divide-section img{
+
+    .divide-section img {
         width: 100%;
         padding: 20px;
     }
-    .images-text{
+
+    .images-text {
         width: 100%;
         padding: 20px;
     }
